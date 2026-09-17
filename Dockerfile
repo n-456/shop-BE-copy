@@ -21,4 +21,4 @@ COPY --from=builder /app/target/shop-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
 # Chạy ứng dụng Spring Boot
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Djava.net.preferIPv4Stack=true", "-jar", "app.jar"]
